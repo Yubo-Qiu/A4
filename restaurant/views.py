@@ -70,13 +70,11 @@ def confirmation(request):
         'name': order_data.get('name'),
         'phone': order_data.get('phone'),
         'email': order_data.get('email'),
-        'menu_items': order_data.get('menu_items', []),  # Get items ordered with price
+        'menu_items': order_data.get('menu_items', []),  # Get ordered items
         'instructions': order_data.get('instructions'),
         'total_price': order_data.get('total_price', 0),  # Get total price
         'ready_time': ready_time_str
     }
 
     return render(request, 'restaurant/confirmation.html', context)
-
-
 

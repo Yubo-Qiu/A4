@@ -8,8 +8,8 @@
 
 <p>Items Ordered:</p>
 <ul>
-    {% for item in items_ordered %}
-        <li>{{ item }}</li>
+    {% for item in menu_items %}
+        <p>{{ item.name }} - ${{ item.price }}</p>  <!-- Accessing 'name' and 'price' -->
     {% endfor %}
 </ul>
 <p>Total Price: ${{ total_price }}</p>
